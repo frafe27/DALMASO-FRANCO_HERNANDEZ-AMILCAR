@@ -4,20 +4,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8de9805f-6c2a-44a9-b74c-229388213270" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/h2_2_2_224.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/log4j_1_2_17.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DALMASO-FRANCO_HERNANDEZ-AMILCAR.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/log4j.properties" afterDir="false" />
+    <list default="true" id="8de9805f-6c2a-44a9-b74c-229388213270" name="Changes" comment="v2">
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/create.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/backend/parcial/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/backend/parcial/dbconnection/H2Connection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/backend/parcial/entity/Odontologo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/backend/parcial/repository/IDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/backend/parcial/repository/Impl/OdontologoDaoH2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/backend/parcial/repository/Impl/OdontologoMemoria.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/backend/parcial/service/IOdontologoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/backend/parcial/service/impl/OdontologoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/backend/parcial/test/OdontologoServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DALMASO-FRANCO_HERNANDEZ-AMILCAR.iml" beforeDir="false" afterPath="$PROJECT_DIR$/DALMASO-FRANCO_HERNANDEZ-AMILCAR.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -25,6 +40,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 2
+}]]></component>
   <component name="ProjectId" id="2gX6VqbmFvFiiuUGb0ooKMxhLpI" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -35,16 +53,61 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "create.test.in.the.same.root": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/Descargas/log4j-1.2.17/apache-log4j-1.2.17/log4j-1.2.17.jar",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+    "last_opened_file_path": "D:/Descargas/h2-2.2.224.jar",
+    "project.structure.last.edited": "Global Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Franco\IdeaProjects\DALMASO-FRANCO_HERNANDEZ-AMILCAR\src" />
+      <recent name="C:\Users\Franco\IdeaProjects\DALMASO-FRANCO_HERNANDEZ-AMILCAR\src\com" />
+      <recent name="C:\Users\Franco\IdeaProjects\DALMASO-FRANCO_HERNANDEZ-AMILCAR\src\com\backend" />
+      <recent name="C:\Users\Franco\IdeaProjects\DALMASO-FRANCO_HERNANDEZ-AMILCAR" />
+      <recent name="C:\Users\Franco\IdeaProjects\DALMASO-FRANCO_HERNANDEZ-AMILCAR\src\com\backend\parcial" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.backend.parcial.test" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="OdontologoServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DALMASO-FRANCO_HERNANDEZ-AMILCAR" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.backend.parcial.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.backend.parcial.test" />
+      <option name="MAIN_CLASS_NAME" value="com.backend.parcial.test.OdontologoServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.OdontologoServiceTest" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -55,5 +118,9 @@
       <updated>1715831603248</updated>
     </task>
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="v2" />
+    <option name="LAST_COMMIT_MESSAGE" value="v2" />
   </component>
 </project>
