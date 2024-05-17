@@ -24,7 +24,7 @@ public class OdontologoDaoH2 implements IDao<Odontologo> {
 
             PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO ODONTOLOGOS (NUMERO_MATRICULA, NOMBRE, APELLIDO) VALUES (?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
 
-            preparedStatement.setInt(1,odontologo.getNumeroMatricula());
+            preparedStatement.setInt(1, odontologo.getNumeroMatricula());
             preparedStatement.setString(2, odontologo.getNombre());
             preparedStatement.setString(3, odontologo.getApellido());
             preparedStatement.execute();
@@ -32,7 +32,7 @@ public class OdontologoDaoH2 implements IDao<Odontologo> {
             ResultSet resultSet = preparedStatement.getGeneratedKeys();
             odontologoRegistrado = new Odontologo(odontologo.getNumeroMatricula(), odontologo.getNombre(), odontologo.getApellido());
 
-            while(resultSet.next()) {
+            while (resultSet.next()) {
                 odontologoRegistrado.setID(resultSet.getLong("id"));
             }
             connection.commit();
@@ -69,19 +69,18 @@ public class OdontologoDaoH2 implements IDao<Odontologo> {
         Connection connection = null;
         List<Odontologo> odontologos = new ArrayList<>();
 
-        try{
+        try {
             connection = H2Connection.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM ODONTOLOGOS");
             ResultSet resultSet = preparedStatement.executeQuery();
-            while (resultSet.next()){
-                Odontologo odontologo = new Odontologo(resultSet.getLong("ID"),resultSet.getInt("NUMERO_MATRICULA"), resultSet.getString("NOMBRE"), resultSet.getString("APELLIDO"));
+            while (resultSet.next()) {
+                Odontologo odontologo = new Odontologo(resultSet.getLong("ID"), resultSet.getInt("NUMERO_MATRICULA"), resultSet.getString("NOMBRE"), resultSet.getString("APELLIDO"));
 
                 odontologos.add(odontologo);
             }
 
 
-
-        }catch (Exception e) {
+        } catch (Exception e) {
             LOGGER.error(e.getMessage());
             e.printStackTrace();
 

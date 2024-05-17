@@ -4,13 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8de9805f-6c2a-44a9-b74c-229388213270" name="Changes" comment="v2">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DALMASO-FRANCO_HERNANDEZ-AMILCAR.iml" beforeDir="false" afterPath="$PROJECT_DIR$/DALMASO-FRANCO_HERNANDEZ-AMILCAR.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/create.sql" beforeDir="false" afterPath="$PROJECT_DIR$/create.sql" afterDir="false" />
+    <list default="true" id="8de9805f-6c2a-44a9-b74c-229388213270" name="Changes" comment="Versión Final">
       <change beforePath="$PROJECT_DIR$/src/com/backend/parcial/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/backend/parcial/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/backend/parcial/dbconnection/H2Connection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/backend/parcial/dbconnection/H2Connection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/backend/parcial/entity/Odontologo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/backend/parcial/entity/Odontologo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/backend/parcial/repository/IDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/backend/parcial/repository/IDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/backend/parcial/repository/Impl/OdontologoDaoH2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/backend/parcial/repository/Impl/OdontologoDaoH2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/backend/parcial/repository/Impl/OdontologoMemoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/backend/parcial/repository/Impl/OdontologoMemoria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/backend/parcial/service/impl/OdontologoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/backend/parcial/service/impl/OdontologoService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/backend/parcial/test/OdontologoServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/backend/parcial/test/OdontologoServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/log4j.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,11 +122,20 @@
       <option name="project" value="LOCAL" />
       <updated>1715921181977</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Versión Final">
+      <option name="closed" value="true" />
+      <created>1715925195276</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1715925195276</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="v2" />
-    <option name="LAST_COMMIT_MESSAGE" value="v2" />
+    <MESSAGE value="Versión Final" />
+    <option name="LAST_COMMIT_MESSAGE" value="Versión Final" />
   </component>
 </project>
