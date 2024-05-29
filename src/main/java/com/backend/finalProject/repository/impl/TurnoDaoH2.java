@@ -1,7 +1,6 @@
 package com.backend.finalProject.repository.impl;
 
 import com.backend.finalProject.dbconnection.H2Connection;
-import com.backend.finalProject.entity.Domicilio;
 import com.backend.finalProject.entity.Odontologo;
 import com.backend.finalProject.entity.Paciente;
 import com.backend.finalProject.entity.Turno;
@@ -13,8 +12,8 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TunoDaoH2 implements IDao<Turno> {
-    private final Logger LOGGER = LoggerFactory.getLogger(TunoDaoH2.class);
+public class TurnoDaoH2 implements IDao<Turno> {
+    private final Logger LOGGER = LoggerFactory.getLogger(TurnoDaoH2.class);
 
     private PacienteDaoH2 pacienteDaoH2;
     private OdontologoDaoH2 odontologoDaoH2;
