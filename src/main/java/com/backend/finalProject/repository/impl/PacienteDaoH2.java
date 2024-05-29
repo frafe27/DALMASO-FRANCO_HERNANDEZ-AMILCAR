@@ -79,7 +79,39 @@ public class PacienteDaoH2 implements IDao<Paciente> {
 
     @Override
     public Paciente buscarPorId(Long id) {
-        return null;
+        Paciente pacienteBuscado = null;
+        Connection connection = null;
+
+        try{
+            connection = H2Connection.getConnection();
+
+            PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM PACIENTES WHERE ID = ?");
+            preparedStatement.setLong(1, id);
+
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()){
+                domicilioDaoH2 = new DomicilioDaoH2();
+                Domicilio domicilioBuscado = domicilioDaoH2.buscarPorId(resultSet.getLong(6));
+
+                pacienteBuscado = new Paciente(resultSet.getLong(1), resultSet.getString(2), resultSet.getString(3), resultSet.getInt(4), resultSet.getDate(5).toLocalDate(), domicilioBuscado);
+            }
+
+        } catch (Exception e) {
+            LOGGER.error(e.getMessage());
+            e.printStackTrace();
+        } finally {
+            try {
+                connection.close();
+            } catch (Exception ex) {
+                LOGGER.error("Ha ocurrido un error al intentar cerrar la bdd. " + ex.getMessage());
+                ex.printStackTrace();
+            }
+        }
+
+        if(pacienteBuscado == null) LOGGER.error("No se ha encontrado el paciente con id: " + id);
+        else LOGGER.info("Se ha encontrado el paciente: " + pacienteBuscado);
+
+        return pacienteBuscado;
     }
 
     @Override
