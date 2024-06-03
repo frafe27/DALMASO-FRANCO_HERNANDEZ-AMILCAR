@@ -2,13 +2,13 @@ package com.backend.finalProject.entity;
 
 public class Odontologo {
 
-    private Long ID;
+    private Long id;
     private int numeroMatricula;
     private String nombre;
     private String apellido;
 
-    public Odontologo(Long ID, int numeroMatricula, String nombre, String apellido) {
-        this.ID = ID;
+    public Odontologo(Long id, int numeroMatricula, String nombre, String apellido) {
+        this.id = id;
         this.numeroMatricula = numeroMatricula;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -21,11 +21,11 @@ public class Odontologo {
     }
 
     public Long getID() {
-        return ID;
+        return id;
     }
 
     public void setID(Long ID) {
-        this.ID = ID;
+        this.id = id;
     }
 
     public int getNumeroMatricula() {
@@ -43,7 +43,7 @@ public class Odontologo {
     @Override
     public String toString() {
         return "Odontologo{" +
-                "ID=" + ID +
+                "id=" + id +
                 ", numeroMatricula=" + numeroMatricula +
                 ", nombre='" + nombre + '\'' +
                 ", apellido='" + apellido + '\'' +
