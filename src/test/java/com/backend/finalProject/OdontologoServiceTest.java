@@ -1,7 +1,6 @@
 package com.backend.finalProject;
 
 import com.backend.finalProject.entity.Odontologo;
-import com.backend.finalProject.repository.impl.OdontologoDaoH2;
 import com.backend.finalProject.service.impl.OdontologoService;
 import org.junit.jupiter.api.Test;
 
@@ -16,8 +15,9 @@ class OdontologoServiceTest {
     void deberiaRegistrarseUnOdontologoEnLaBaseDeDatos() {
 
 //        odontologoService = new OdontologoService(new OdontologoDaoH2());
-//        Odontologo odontologo = new Odontologo(32412, "JUAN", "PEREZ");
-//        Odontologo odontologoRegistrado = odontologoService.registrar(odontologo);
+//        OdontologoEntradaDto odontologoEntradaDto = new OdontologoEntradaDto(32412, "JUAN", "PEREZ");
+//
+//        Odontologo odontologoRegistrado = odontologoService.registrarOdontologo(odontologo);
 //        assertNotNull(odontologoRegistrado.toString());
 
     }

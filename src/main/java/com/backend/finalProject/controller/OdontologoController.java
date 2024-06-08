@@ -3,6 +3,8 @@ package com.backend.finalProject.controller;
 import com.backend.finalProject.dto.entrada.OdontologoEntradaDto;
 import com.backend.finalProject.dto.salida.OdontologoSalidaDto;
 import com.backend.finalProject.service.IOdontologoService;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -20,13 +22,13 @@ public class OdontologoController {
 
     //POST
     @PostMapping("/registrar")
-    public OdontologoSalidaDto registrarOdontologo(@RequestBody @Valid OdontologoEntradaDto odontologoEntradaDto) {
-        return odontologoService.registrarOdontologo(odontologoEntradaDto);
+    public ResponseEntity<OdontologoSalidaDto> registrarOdontologo(@RequestBody @Valid OdontologoEntradaDto odontologoEntradaDto) {
+        return new ResponseEntity<>(odontologoService.registrarOdontologo(odontologoEntradaDto), HttpStatus.CREATED);
     }
 
     //GET
     @GetMapping("/listar")
-    public List<OdontologoSalidaDto> listarOdontologos() {
-        return odontologoService.listarTodos();
+    public ResponseEntity<List<OdontologoSalidaDto>> listarOdontologos() {
+        return new ResponseEntity<>(odontologoService.listarTodos(), HttpStatus.OK);
     }
 }

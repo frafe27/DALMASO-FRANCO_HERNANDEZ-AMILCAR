@@ -7,6 +7,8 @@ import java.util.List;
 
 public interface IOdontologoService {
     OdontologoSalidaDto registrarOdontologo(OdontologoEntradaDto odontologoEntradaDto);
-
     List<OdontologoSalidaDto> listarTodos();
+    OdontologoSalidaDto buscarOdontologoPorId(Long id);
+    void eliminarOdontologo(Long id);
+    OdontologoSalidaDto actualizarOdontologo(OdontologoEntradaDto odontologoEntradaDto, Long id);
 }

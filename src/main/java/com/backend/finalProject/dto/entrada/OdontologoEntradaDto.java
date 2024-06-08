@@ -1,10 +1,11 @@
 package com.backend.finalProject.dto.entrada;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 public class OdontologoEntradaDto {
 
-    @NotBlank(message = "Debe proveerse el numero de matricula")
+    @NotNull(message = "Debe proveerse el numero de matricula")
     private int numeroMatricula;
 
     @NotBlank(message = "Debe proveerse el nombre")

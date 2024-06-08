@@ -20,11 +20,11 @@ public class Odontologo {
         this.apellido = apellido;
     }
 
-    public Long getID() {
+    public Long getId() {
         return id;
     }
 
-    public void setID(Long ID) {
+    public void setId(Long Id) {
         this.id = id;
     }
 

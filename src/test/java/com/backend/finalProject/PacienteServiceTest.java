@@ -2,7 +2,6 @@ package com.backend.finalProject;
 
 import com.backend.finalProject.entity.Domicilio;
 import com.backend.finalProject.entity.Paciente;
-import com.backend.finalProject.repository.impl.PacienteDaoH2;
 import com.backend.finalProject.service.impl.PacienteService;
 import org.junit.jupiter.api.Test;
 
