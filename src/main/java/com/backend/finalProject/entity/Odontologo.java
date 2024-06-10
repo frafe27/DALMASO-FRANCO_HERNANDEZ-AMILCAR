@@ -1,10 +1,22 @@
 package com.backend.finalProject.entity;
 
+
+import javax.persistence.Entity;
+import javax.persistence.*;
+
+
+@Entity
+@Table(name = "ODONTOLOGOS")
 public class Odontologo {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(length = 20)
     private int numeroMatricula;
+    @Column(length = 50)
     private String nombre;
+    @Column(length = 50)
     private String apellido;
 
     public Odontologo(Long id, int numeroMatricula, String nombre, String apellido) {
@@ -14,10 +26,7 @@ public class Odontologo {
         this.apellido = apellido;
     }
 
-    public Odontologo(int numeroMatricula, String nombre, String apellido) {
-        this.numeroMatricula = numeroMatricula;
-        this.nombre = nombre;
-        this.apellido = apellido;
+    public Odontologo() {
     }
 
     public Long getId() {

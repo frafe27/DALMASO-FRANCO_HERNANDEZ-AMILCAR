@@ -31,4 +31,24 @@ public class OdontologoController {
     public ResponseEntity<List<OdontologoSalidaDto>> listarOdontologos() {
         return new ResponseEntity<>(odontologoService.listarTodos(), HttpStatus.OK);
     }
+
+    //GET por ID
+    @GetMapping("/listar/{id}")
+    public ResponseEntity<OdontologoSalidaDto> buscarOdontologoPorId(@PathVariable Long id) {
+        return new ResponseEntity<>(odontologoService.buscarOdontologoPorId(id), HttpStatus.OK);
+    }
+
+    //PUT
+    @PutMapping("/actualizar/{id}")
+    public ResponseEntity<OdontologoSalidaDto> actualizarOdontologo(@RequestBody @Valid OdontologoEntradaDto odontologoEntradaDto, @PathVariable Long id) {
+        return new ResponseEntity<>(odontologoService.actualizarOdontologo(odontologoEntradaDto, id), HttpStatus.OK);
+    }
+
+    //DELETE
+    @DeleteMapping("/eliminar/")
+    public ResponseEntity<?> eliminarOdontologo(@RequestParam Long id) {
+        odontologoService.eliminarOdontologo(id);
+        return new ResponseEntity<>("Odontologo Eliminado", HttpStatus.NO_CONTENT);
+    }
+
 }
