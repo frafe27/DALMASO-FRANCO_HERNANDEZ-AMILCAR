@@ -72,12 +72,7 @@ public class PacienteService implements IPacienteService {
         if(buscarPacientePorId(id) != null){
             pacienteRepository.deleteById(id);
             LOGGER.warn("Se ha eliminado el paciente con id {}", id);
-        } // else {
-        //lanzar excepcion
-
-        //}
-
-
+        } else LOGGER.error("No se ha podido eliminar el paciente porque no se encuentra en nuestra base de datos");
     }
 
     @Override
@@ -99,7 +94,6 @@ public class PacienteService implements IPacienteService {
 
         } else {
             LOGGER.error("No fue posible actualizar el paciente porque no se encuentra en nuestra base de datos");
-            //lanzar excepcion
         }
 
         return pacienteSalidaDto;
