@@ -10,11 +10,11 @@ import java.time.LocalDateTime;
 
 public class TurnoEntradaDto {
 
-    @NotBlank(message = "Debe especificar un paciente")
+    @NotNull(message = "Debe especificar un paciente")
     @Valid
     private PacienteEntradaDto pacienteEntradaDto;
 
-    @NotBlank(message = "Debe especificar un odontologo")
+    @NotNull(message = "Debe especificar un odontologo")
     @Valid
     private OdontologoEntradaDto odontologoEntradaDto;
 

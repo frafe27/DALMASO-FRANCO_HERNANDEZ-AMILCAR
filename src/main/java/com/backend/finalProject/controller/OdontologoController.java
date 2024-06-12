@@ -2,6 +2,7 @@ package com.backend.finalProject.controller;
 
 import com.backend.finalProject.dto.entrada.OdontologoEntradaDto;
 import com.backend.finalProject.dto.salida.OdontologoSalidaDto;
+import com.backend.finalProject.exceptions.ResourceNotFoundException;
 import com.backend.finalProject.service.IOdontologoService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -45,8 +46,8 @@ public class OdontologoController {
     }
 
     //DELETE
-    @DeleteMapping("/eliminar/")
-    public ResponseEntity<?> eliminarOdontologo(@RequestParam Long id) {
+    @DeleteMapping("/eliminar")
+    public ResponseEntity<?> eliminarOdontologo(@RequestParam Long id) throws ResourceNotFoundException {
         odontologoService.eliminarOdontologo(id);
         return new ResponseEntity<>("Odontologo Eliminado", HttpStatus.NO_CONTENT);
     }

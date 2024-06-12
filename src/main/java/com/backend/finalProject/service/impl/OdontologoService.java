@@ -2,6 +2,7 @@ package com.backend.finalProject.service.impl;
 import com.backend.finalProject.dto.entrada.OdontologoEntradaDto;
 import com.backend.finalProject.dto.salida.OdontologoSalidaDto;
 import com.backend.finalProject.entity.Odontologo;
+import com.backend.finalProject.exceptions.ResourceNotFoundException;
 import com.backend.finalProject.repository.OdontologoRepository;
 import com.backend.finalProject.service.IOdontologoService;
 import org.modelmapper.ModelMapper;
@@ -66,12 +67,12 @@ public class OdontologoService implements IOdontologoService {
 
 
     @Override
-    public void eliminarOdontologo(Long id) {
+    public void eliminarOdontologo(Long id) throws ResourceNotFoundException{
         if(buscarOdontologoPorId(id) != null){
             odontologoRepository.deleteById(id);
             LOGGER.info("Se ha eliminado el Odontologo con id {}", id);
         } else {
-            LOGGER.error("No se ha podido eliminar el Odontologo con id {}", id);
+            throw new ResourceNotFoundException("No existe registro de odontologo con id " + id);
         }
     }
 
