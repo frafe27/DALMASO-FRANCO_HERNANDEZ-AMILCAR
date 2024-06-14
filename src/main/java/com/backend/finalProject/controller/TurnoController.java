@@ -2,6 +2,7 @@ package com.backend.finalProject.controller;
 
 import com.backend.finalProject.dto.entrada.TurnoEntradaDto;
 import com.backend.finalProject.dto.salida.TurnoSalidaDto;
+import com.backend.finalProject.exceptions.BadRequestException;
 import com.backend.finalProject.service.ITurnoService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,7 +21,7 @@ public class TurnoController {
 
     //POST
     @PostMapping("/registrar")
-    public ResponseEntity<TurnoSalidaDto> registrarTurno(@RequestBody @Valid TurnoEntradaDto turnoEntradaDto){
+    public ResponseEntity<TurnoSalidaDto> registrarTurno(@RequestBody @Valid TurnoEntradaDto turnoEntradaDto) throws BadRequestException {
         return new ResponseEntity<>(turnoService.registrarTurno(turnoEntradaDto), HttpStatus.CREATED);
     }
 

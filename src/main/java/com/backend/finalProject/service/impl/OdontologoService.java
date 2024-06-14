@@ -27,7 +27,7 @@ public class OdontologoService implements IOdontologoService {
     @Override
     public OdontologoSalidaDto registrarOdontologo(OdontologoEntradaDto odontologoEntradaDto) {
         //mapeo de DTO a entidad
-        LOGGER.info("OdontologoEntradaDTO: --->" + odontologoEntradaDto.getNombre());
+        LOGGER.info("OdontologoEntradaDTO: " + odontologoEntradaDto.toString());
         Odontologo odontologo = modelMapper.map(odontologoEntradaDto, Odontologo.class);
         LOGGER.info("OdontologoEntidad: " + odontologo);
         //mapeo de entidad a DTO

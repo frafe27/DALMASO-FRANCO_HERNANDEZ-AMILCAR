@@ -54,4 +54,13 @@ public class TurnoEntradaDto {
     public void setFechaYHora(LocalDateTime fechaYHora) {
         this.fechaYHora = fechaYHora;
     }
+
+    @Override
+    public String toString() {
+        return "TurnoEntradaDto{" +
+                "pacienteSalidaDto=" + pacienteSalidaDto +
+                ", odontologoSalidaDto=" + odontologoSalidaDto +
+                ", fechaYHora=" + fechaYHora +
+                '}';
+    }
 }

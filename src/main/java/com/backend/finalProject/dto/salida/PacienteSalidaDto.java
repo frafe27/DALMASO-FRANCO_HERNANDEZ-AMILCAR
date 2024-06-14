@@ -72,4 +72,16 @@ public class PacienteSalidaDto {
     public void setDomicilioSalidaDto(DomicilioSalidaDto domicilioSalidaDto) {
         this.domicilioSalidaDto = domicilioSalidaDto;
     }
+
+    @Override
+    public String toString() {
+        return "PacienteSalidaDto{" +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                ", dni=" + dni +
+                ", fechaIngreso=" + fechaIngreso +
+                ", domicilioSalidaDto=" + domicilioSalidaDto +
+                '}';
+    }
 }

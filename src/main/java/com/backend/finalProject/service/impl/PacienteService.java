@@ -30,13 +30,10 @@ public class PacienteService implements IPacienteService {
 
     @Override
     public PacienteSalidaDto registrarPaciente(PacienteEntradaDto pacienteEntradaDto) {
-        //logica de negocio
         //mapeo de dto a entidad
         LOGGER.info("PacienteEntradaDto: " + pacienteEntradaDto);
         Paciente paciente = modelMapper.map(pacienteEntradaDto, Paciente.class);
         LOGGER.info("PacienteEntidad: " + paciente);
-        //Paciente pacienteRegistrado = pacienteIDao.registrar(paciente);
-        //mapeo de entidad a dto
         PacienteSalidaDto pacienteSalidaDto = modelMapper.map(pacienteRepository.save(paciente), PacienteSalidaDto.class);
         LOGGER.info("PacienteSalidaDto: " + pacienteSalidaDto);
         return pacienteSalidaDto;
