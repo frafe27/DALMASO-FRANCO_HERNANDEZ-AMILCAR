@@ -2,6 +2,9 @@ package com.backend.finalProject.service.impl;
 import com.backend.finalProject.dto.entrada.TurnoEntradaDto;
 import com.backend.finalProject.dto.salida.TurnoSalidaDto;
 import com.backend.finalProject.entity.Turno;
+import com.backend.finalProject.exceptions.BadRequestException;
+import com.backend.finalProject.repository.OdontologoRepository;
+import com.backend.finalProject.repository.PacienteRepository;
 import com.backend.finalProject.repository.TurnoRepository;
 import com.backend.finalProject.service.ITurnoService;
 import org.modelmapper.ModelMapper;
@@ -16,16 +19,30 @@ public class TurnoService implements ITurnoService {
     //Se mapea de DTO a entidad y viceversa
     private final Logger LOGGER = LoggerFactory.getLogger(TurnoService.class);
     private final TurnoRepository turnoRepository;
+    private final PacienteRepository pacienteRepository;
+    private final OdontologoRepository odontologoRepository;
     private final ModelMapper modelMapper;
 
-    public TurnoService(TurnoRepository turnoRepository, ModelMapper modelMapper) {
+    public TurnoService(TurnoRepository turnoRepository, PacienteRepository pacienteRepository, OdontologoRepository odontologoRepository, PacienteRepository pacienteRepository1, OdontologoRepository odontologoRepository1, ModelMapper modelMapper) {
         this.turnoRepository = turnoRepository;
+        this.pacienteRepository = pacienteRepository1;
+        this.odontologoRepository = odontologoRepository1;
         this.modelMapper = modelMapper;
         configureMapping();
     }
 
     @Override
-    public TurnoSalidaDto registrarTurno(TurnoEntradaDto turnoEntradaDto) {
+    public TurnoSalidaDto registrarTurno(TurnoEntradaDto turnoEntradaDto) throws BadRequestException {
+        PacienteService pacienteService = new PacienteService(pacienteRepository, modelMapper);
+        OdontologoService odontologoService = new OdontologoService(odontologoRepository, modelMapper);
+
+        if (pacienteService.buscarPacientePorId(turnoEntradaDto.getPacienteSalidaDto().getId()) == null) {
+            throw new BadRequestException("El paciente no existe");
+        }
+        if (odontologoService.buscarOdontologoPorId(turnoEntradaDto.getOdontologoSalidaDto().getId()) == null) {
+            throw new BadRequestException("El odontologo no existe");
+        }
+
         //mapeo de DTO a entidad
         LOGGER.info("TurnoEntradaDto: " + turnoEntradaDto);
         Turno turno = modelMapper.map(turnoEntradaDto, Turno.class);

@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c51259d-68b2-48a3-a800-f3b9fb5c6b62" name="Changes" comment="Set in &amp; out data for the entities, mapper set for the Turno &amp; Odontologo services.">
+    <list default="true" id="0c51259d-68b2-48a3-a800-f3b9fb5c6b62" name="Changes" comment="ResourceNotFoundException y GlobalExceptionHandler">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/controller/OdontologoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/controller/OdontologoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/controller/PacienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/controller/PacienteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/service/IOdontologoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/service/IOdontologoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/service/IPacienteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/service/IPacienteService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/service/impl/OdontologoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/service/impl/OdontologoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/service/impl/PacienteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/service/impl/PacienteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/dto/entrada/TurnoEntradaDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/dto/entrada/TurnoEntradaDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/exceptions/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/exceptions/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/service/impl/TurnoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/service/impl/TurnoService.java" afterDir="false" />
     </list>
     <list id="98f54944-81ad-4b2a-9f09-aebbc1069030" name="Changes by Franco" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -186,11 +183,20 @@
       <option name="project" value="LOCAL" />
       <updated>1717387409402</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="ResourceNotFoundException y GlobalExceptionHandler">
+      <option name="closed" value="true" />
+      <created>1718157767612</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1718157767612</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Set in &amp; out data for the entities, mapper set for the Turno &amp; Odontologo services." />
-    <option name="LAST_COMMIT_MESSAGE" value="Set in &amp; out data for the entities, mapper set for the Turno &amp; Odontologo services." />
+    <MESSAGE value="ResourceNotFoundException y GlobalExceptionHandler" />
+    <option name="LAST_COMMIT_MESSAGE" value="ResourceNotFoundException y GlobalExceptionHandler" />
   </component>
 </project>
