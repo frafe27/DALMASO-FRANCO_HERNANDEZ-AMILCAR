@@ -11,7 +11,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
-
 import java.util.List;
 
 
@@ -57,7 +56,7 @@ public class PacienteService implements IPacienteService {
         Paciente pacienteBuscado = pacienteRepository.findById(id).orElse(null);
         PacienteSalidaDto pacienteEncontrado = null;
 
-        if (pacienteBuscado != null){
+        if (pacienteBuscado != null) {
             pacienteEncontrado = modelMapper.map(pacienteBuscado, PacienteSalidaDto.class);
             LOGGER.info("Paciente encontrado: {}", pacienteEncontrado);
         } else LOGGER.error("No se ha encontrado el paciente con id {}", id);
@@ -67,7 +66,7 @@ public class PacienteService implements IPacienteService {
 
     @Override
     public void eliminarPaciente(Long id) throws ResourceNotFoundException {
-        if(buscarPacientePorId(id) != null){
+        if (buscarPacientePorId(id) != null) {
             pacienteRepository.deleteById(id);
             LOGGER.warn("Se ha eliminado el paciente con id {}", id);
         } else {
@@ -82,7 +81,7 @@ public class PacienteService implements IPacienteService {
         Paciente pacienteAActualizar = pacienteRepository.findById(id).orElse(null);
         PacienteSalidaDto pacienteSalidaDto = null;
 
-        if(pacienteAActualizar != null){
+        if (pacienteAActualizar != null) {
 
             pacienteRecibido.setId(pacienteAActualizar.getId());
             pacienteRecibido.getDomicilio().setId(pacienteAActualizar.getDomicilio().getId());
@@ -100,7 +99,7 @@ public class PacienteService implements IPacienteService {
     }
 
 
-    private void configureMapping(){
+    private void configureMapping() {
         modelMapper.typeMap(PacienteEntradaDto.class, Paciente.class)
                 .addMappings(mapper -> mapper.map(PacienteEntradaDto::getDomicilioEntradaDto, Paciente::setDomicilio));
         modelMapper.typeMap(Paciente.class, PacienteSalidaDto.class)

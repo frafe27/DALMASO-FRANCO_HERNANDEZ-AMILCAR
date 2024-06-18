@@ -2,7 +2,6 @@ package com.backend.finalProject.controller;
 
 import com.backend.finalProject.dto.entrada.PacienteEntradaDto;
 import com.backend.finalProject.dto.salida.PacienteSalidaDto;
-
 import com.backend.finalProject.exceptions.ResourceNotFoundException;
 import com.backend.finalProject.service.IPacienteService;
 import org.springframework.http.HttpStatus;
@@ -14,10 +13,8 @@ import java.util.List;
 
 @RestController
 @RequestMapping("pacientes")
+@CrossOrigin
 public class PacienteController {
-
-    //peticion http json <-> @RequestBody & @ResponseBody -> java dto -> controller dto -> servicio dto <-> entidad <-> persistencia entidad <-> base de datos
-    //se trabaja con DTP
 
     private IPacienteService pacienteService;
 
@@ -27,24 +24,24 @@ public class PacienteController {
 
     //POST
     @PostMapping("/registrar")
-    public ResponseEntity<PacienteSalidaDto> registrarPaciente(@RequestBody @Valid PacienteEntradaDto pacienteEntradaDto){
+    public ResponseEntity<PacienteSalidaDto> registrarPaciente(@RequestBody @Valid PacienteEntradaDto pacienteEntradaDto) {
         return new ResponseEntity<>(pacienteService.registrarPaciente(pacienteEntradaDto), HttpStatus.CREATED);
     }
 
     //GET
     @GetMapping("/listar")
-    public ResponseEntity<List<PacienteSalidaDto>> listarPacientes(){
+    public ResponseEntity<List<PacienteSalidaDto>> listarPacientes() {
         return new ResponseEntity<>(pacienteService.listarPacientes(), HttpStatus.OK);
     }
 
     @GetMapping("/{id}")//localhost:8080/pacientes/x
-    public ResponseEntity<PacienteSalidaDto> buscarPacientePorId(@PathVariable Long id){
+    public ResponseEntity<PacienteSalidaDto> buscarPacientePorId(@PathVariable Long id) {
         return new ResponseEntity<>(pacienteService.buscarPacientePorId(id), HttpStatus.OK);
     }
 
     //PUT
     @PutMapping("/actualizar/{id}")
-    public ResponseEntity<PacienteSalidaDto> actualizarPaciente(@RequestBody @Valid PacienteEntradaDto pacienteEntradaDto, @PathVariable Long id){
+    public ResponseEntity<PacienteSalidaDto> actualizarPaciente(@RequestBody @Valid PacienteEntradaDto pacienteEntradaDto, @PathVariable Long id) {
         return new ResponseEntity<>(pacienteService.actualizarPaciente(pacienteEntradaDto, id), HttpStatus.OK);
     }
 
@@ -54,7 +51,6 @@ public class PacienteController {
         pacienteService.eliminarPaciente(id);
         return new ResponseEntity<>("Paciente eliminado correctamente", HttpStatus.NO_CONTENT);
     }
-
 
 
 }

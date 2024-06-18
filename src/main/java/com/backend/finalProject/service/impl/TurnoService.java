@@ -1,4 +1,5 @@
 package com.backend.finalProject.service.impl;
+
 import com.backend.finalProject.dto.entrada.TurnoEntradaDto;
 import com.backend.finalProject.dto.salida.TurnoSalidaDto;
 import com.backend.finalProject.entity.Turno;
@@ -16,7 +17,6 @@ import java.util.List;
 
 @Service
 public class TurnoService implements ITurnoService {
-    //Se mapea de DTO a entidad y viceversa
     private final Logger LOGGER = LoggerFactory.getLogger(TurnoService.class);
     private final TurnoRepository turnoRepository;
     private final PacienteRepository pacienteRepository;
@@ -52,14 +52,12 @@ public class TurnoService implements ITurnoService {
         LOGGER.info("TurnoRegistrado: " + turnoRegistrado);
         //mapeo de entidad a DTO
 
-        return modelMapper.map(turnoRegistrado,TurnoSalidaDto.class);
+        return modelMapper.map(turnoRegistrado, TurnoSalidaDto.class);
     }
 
     @Override
     public List<TurnoSalidaDto> listarTurnos() {
-        //mapeo de lista de entidades a listas de datos
         List<Turno> turnos = turnoRepository.findAll();
-        // Mapeo de lista de entidades a listas de datos
         List<TurnoSalidaDto> turnosSalida = turnos.stream()
                 .map(turno -> modelMapper.map(turno, TurnoSalidaDto.class))
                 .toList();
@@ -93,7 +91,16 @@ public class TurnoService implements ITurnoService {
     }
 
     @Override
-    public TurnoSalidaDto actualizarTurno(TurnoEntradaDto turnoEntradaDto, Long id) {
+    public TurnoSalidaDto actualizarTurno(TurnoEntradaDto turnoEntradaDto, Long id) throws BadRequestException {
+        PacienteService pacienteService = new PacienteService(pacienteRepository, modelMapper);
+        OdontologoService odontologoService = new OdontologoService(odontologoRepository, modelMapper);
+
+        if (pacienteService.buscarPacientePorId(turnoEntradaDto.getPacienteSalidaDto().getId()) == null) {
+            throw new BadRequestException("El paciente no existe");
+        }
+        if (odontologoService.buscarOdontologoPorId(turnoEntradaDto.getOdontologoSalidaDto().getId()) == null) {
+            throw new BadRequestException("El odontologo no existe");
+        }
         Turno turnoRecibido = modelMapper.map(turnoEntradaDto, Turno.class);
         Turno turnoAActualizar = turnoRepository.findById(id).orElse(null);
         TurnoSalidaDto turnoSalidaDto = null;

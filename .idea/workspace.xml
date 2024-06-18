@@ -4,26 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c51259d-68b2-48a3-a800-f3b9fb5c6b62" name="Changes" comment="Turno Implemented not tested, Odontologo fixed (missing setters).">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/exceptions/BadRequestException.java" afterDir="false" />
+    <list default="true" id="0c51259d-68b2-48a3-a800-f3b9fb5c6b62" name="Changes" comment="Hibernate problem &#10;detached entity passed to persist: com.backend.finalProject.entity.Odontologo">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/backend/finalProject/service/impl/OdontologoServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/backend/finalProject/service/impl/PacienteServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/backend/finalProject/service/impl/TurnoServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/application-test.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schema.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/FinalProjectApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/FinalProjectApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/controller/OdontologoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/controller/OdontologoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/controller/PacienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/controller/PacienteController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/controller/TurnoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/controller/TurnoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/dbconnection/H2Connection.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/dto/entrada/DomicilioEntradaDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/dto/entrada/DomicilioEntradaDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/dto/entrada/OdontologoEntradaDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/dto/entrada/OdontologoEntradaDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/dto/entrada/PacienteEntradaDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/dto/entrada/PacienteEntradaDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/dto/entrada/TurnoEntradaDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/dto/entrada/TurnoEntradaDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/dto/salida/DomicilioSalidaDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/dto/salida/DomicilioSalidaDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/dto/salida/OdontologoSalidaDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/dto/salida/OdontologoSalidaDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/dto/salida/PacienteSalidaDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/dto/salida/PacienteSalidaDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/dto/salida/TurnoSalidaDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/dto/salida/TurnoSalidaDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/entity/Domicilio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/entity/Domicilio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/entity/Paciente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/entity/Paciente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/entity/Odontologo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/entity/Odontologo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/entity/Turno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/entity/Turno.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/exceptions/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/exceptions/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/exceptions/ResourceNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/exceptions/ResourceNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/service/IOdontologoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/service/IOdontologoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/service/IPacienteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/service/IPacienteService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/service/ITurnoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/service/ITurnoService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/service/impl/OdontologoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/service/impl/OdontologoService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/service/impl/PacienteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/service/impl/PacienteService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/service/impl/TurnoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/service/impl/TurnoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/backend/finalProject/FinalProjectApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/backend/finalProject/OdontologoServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/backend/finalProject/PacienteServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/backend/finalProject/TurnoServiceTest.java" beforeDir="false" />
     </list>
     <list id="98f54944-81ad-4b2a-9f09-aebbc1069030" name="Changes by Franco" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,6 +44,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -75,10 +84,12 @@
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "create.test.in.the.same.root": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Usuario/Desktop/01-Digital-House/Bimestre 5/Backend/backend_ctd_c1_0424/clinica-odontologica/clinica-odontologica",
+    "last_opened_file_path": "C:/Users/Franco/IdeaProjects/DALMASO-FRANCO_HERNANDEZ-AMILCAR/src/test/resources",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -87,6 +98,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Franco\IdeaProjects\DALMASO-FRANCO_HERNANDEZ-AMILCAR\src\test\resources" />
       <recent name="C:\Users\Franco\IdeaProjects\DALMASO-FRANCO_HERNANDEZ-AMILCAR\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -96,48 +108,28 @@
       <recent name="C:\Users\Franco\IdeaProjects\DALMASO-FRANCO_HERNANDEZ-AMILCAR\src\main\java\com\backend\finalProject\dbconnection" />
       <recent name="C:\Users\Franco\IdeaProjects\DALMASO-FRANCO_HERNANDEZ-AMILCAR\src" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.backend.finalProject" />
       <recent name="com.backend.finalProject.repository" />
     </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.backend.finalProject.service.impl" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.FinalProjectApplication">
-    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.backend.parcial.Application" />
-      <module name="DALMASO-FRANCO_HERNANDEZ-AMILCAR" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.backend.parcial.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FinalProjectApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.backend.finalProject.FinalProjectApplication" />
+  <component name="RunManager" selected="JUnit.TurnoServiceTest">
+    <configuration name="OdontologoServiceTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="finalProject" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.backend.finalProject.*" />
+          <option name="PATTERN" value="com.backend.finalProject.service.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FinalProjectApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="finalProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.backend.finalProject.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.backend.finalProject" />
-      <option name="MAIN_CLASS_NAME" value="com.backend.finalProject.FinalProjectApplicationTests" />
+      <option name="PACKAGE_NAME" value="com.backend.finalProject.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="com.backend.finalProject.service.impl.OdontologoServiceTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -158,15 +150,45 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="com.backend.parcial.test in DALMASO-FRANCO_HERNANDEZ-AMILCAR" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="DALMASO-FRANCO_HERNANDEZ-AMILCAR" />
+    <configuration name="PacienteServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="finalProject" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.backend.parcial.test.*" />
+          <option name="PATTERN" value="com.backend.finalProject.service.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.backend.parcial.test" />
+      <option name="PACKAGE_NAME" value="com.backend.finalProject.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="com.backend.finalProject.service.impl.PacienteServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TurnoServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="finalProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.backend.finalProject.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.backend.finalProject.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="com.backend.finalProject.service.impl.TurnoServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="com.backend.finalProject.service.impl in finalProject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="finalProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.backend.finalProject.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.backend.finalProject.service.impl" />
       <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -174,11 +196,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.FinalProjectApplication" />
-        <item itemvalue="JUnit.FinalProjectApplicationTests" />
+        <item itemvalue="JUnit.TurnoServiceTest" />
+        <item itemvalue="JUnit.PacienteServiceTest" />
+        <item itemvalue="JUnit.OdontologoServiceTest (1)" />
+        <item itemvalue="JUnit.com.backend.finalProject.service.impl in finalProject" />
         <item itemvalue="JUnit.OdontologoServiceTest" />
-        <item itemvalue="JUnit.com.backend.parcial.test in DALMASO-FRANCO_HERNANDEZ-AMILCAR" />
-        <item itemvalue="Application.Application" />
       </list>
     </recent_temporary>
   </component>
@@ -207,12 +229,21 @@
       <option name="project" value="LOCAL" />
       <updated>1718081039474</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Hibernate problem &#10;detached entity passed to persist: com.backend.finalProject.entity.Odontologo">
+      <option name="closed" value="true" />
+      <created>1718347791263</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1718347791263</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Set in &amp; out data for the entities, mapper set for the Turno &amp; Odontologo services." />
     <MESSAGE value="Turno Implemented not tested, Odontologo fixed (missing setters)." />
-    <option name="LAST_COMMIT_MESSAGE" value="Turno Implemented not tested, Odontologo fixed (missing setters)." />
+    <MESSAGE value="Hibernate problem &#10;detached entity passed to persist: com.backend.finalProject.entity.Odontologo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hibernate problem &#10;detached entity passed to persist: com.backend.finalProject.entity.Odontologo" />
   </component>
 </project>

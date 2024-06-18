@@ -19,7 +19,6 @@ public class TurnoEntradaDto {
     private OdontologoSalidaDto odontologoSalidaDto;
     @FutureOrPresent(message = "La fecha no puede ser anterior al día de hoy")
     @NotNull(message = "Debe especificarse la fecha y hora")
-    // investigar si esto es correcto? @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     private LocalDateTime fechaYHora;
 
     public TurnoEntradaDto() {

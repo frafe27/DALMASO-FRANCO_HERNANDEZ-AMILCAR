@@ -1,4 +1,5 @@
 package com.backend.finalProject.service.impl;
+
 import com.backend.finalProject.dto.entrada.OdontologoEntradaDto;
 import com.backend.finalProject.dto.salida.OdontologoSalidaDto;
 import com.backend.finalProject.entity.Odontologo;
@@ -57,7 +58,7 @@ public class OdontologoService implements IOdontologoService {
 
         if (odontologoBuscado != null) {
             odontologoEncontrado = modelMapper.map(odontologoBuscado, OdontologoSalidaDto.class);
-            LOGGER.info("Odontologo encontrado: {}",odontologoEncontrado);
+            LOGGER.info("Odontologo encontrado: {}", odontologoEncontrado);
         } else {
             LOGGER.error("No se ha podido encontrar el Odontologo con id {}", id);
         }
@@ -67,8 +68,8 @@ public class OdontologoService implements IOdontologoService {
 
 
     @Override
-    public void eliminarOdontologo(Long id) throws ResourceNotFoundException{
-        if(buscarOdontologoPorId(id) != null){
+    public void eliminarOdontologo(Long id) throws ResourceNotFoundException {
+        if (buscarOdontologoPorId(id) != null) {
             odontologoRepository.deleteById(id);
             LOGGER.info("Se ha eliminado el Odontologo con id {}", id);
         } else {
@@ -83,14 +84,14 @@ public class OdontologoService implements IOdontologoService {
         Odontologo odontologoAActualizar = odontologoRepository.findById(id).orElse(null);
         OdontologoSalidaDto odontologoSalidaDto = null;
 
-        if(odontologoAActualizar != null) {
+        if (odontologoAActualizar != null) {
 
-           odontologoRecibido.setId(odontologoAActualizar.getId());
-           odontologoAActualizar = odontologoRecibido;
+            odontologoRecibido.setId(odontologoAActualizar.getId());
+            odontologoAActualizar = odontologoRecibido;
 
-           odontologoRepository.save(odontologoAActualizar);
-           odontologoSalidaDto = modelMapper.map(odontologoAActualizar, OdontologoSalidaDto.class);
-           LOGGER.info("Odontologo actualizado: {}", odontologoSalidaDto);
+            odontologoRepository.save(odontologoAActualizar);
+            odontologoSalidaDto = modelMapper.map(odontologoAActualizar, OdontologoSalidaDto.class);
+            LOGGER.info("Odontologo actualizado: {}", odontologoSalidaDto);
         } else {
             LOGGER.error("No se ha podido actualizar el Odontologo con id {}", id);
         }

@@ -8,10 +8,13 @@ import java.util.List;
 
 public interface ITurnoService {
     TurnoSalidaDto registrarTurno(TurnoEntradaDto turnoEntradaDto) throws BadRequestException;
+
     List<TurnoSalidaDto> listarTurnos();
 
     TurnoSalidaDto buscarTurnoPorId(Long id);
+
     void eliminarTurno(Long id);
-    TurnoSalidaDto actualizarTurno(TurnoEntradaDto turnoEntradaDto, Long id);
+
+    TurnoSalidaDto actualizarTurno(TurnoEntradaDto turnoEntradaDto, Long id) throws BadRequestException;
 
 }

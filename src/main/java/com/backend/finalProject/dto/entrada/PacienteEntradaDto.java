@@ -75,6 +75,7 @@ public class PacienteEntradaDto {
     public void setDomicilioEntradaDto(DomicilioEntradaDto domicilioEntradaDto) {
         this.domicilioEntradaDto = domicilioEntradaDto;
     }
+
     @Override
     public String toString() {
         return "PacienteEntradaDto{" +
