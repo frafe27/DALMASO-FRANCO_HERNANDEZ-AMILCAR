@@ -4,34 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c51259d-68b2-48a3-a800-f3b9fb5c6b62" name="Changes" comment="Hibernate problem &#10;detached entity passed to persist: com.backend.finalProject.entity.Odontologo">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/backend/finalProject/service/impl/OdontologoServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/backend/finalProject/service/impl/PacienteServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/backend/finalProject/service/impl/TurnoServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/application-test.properties" afterDir="false" />
+    <list default="true" id="0c51259d-68b2-48a3-a800-f3b9fb5c6b62" name="Changes" comment="Turno error fixed.&#10;Tests implemented&#10;&#10;Project final build.">
+      <change afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/FinalProjectApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/FinalProjectApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/controller/OdontologoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/controller/OdontologoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/controller/PacienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/controller/PacienteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/controller/TurnoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/controller/TurnoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/dto/entrada/PacienteEntradaDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/dto/entrada/PacienteEntradaDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/dto/entrada/TurnoEntradaDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/dto/entrada/TurnoEntradaDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/entity/Odontologo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/entity/Odontologo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/entity/Turno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/entity/Turno.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/exceptions/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/exceptions/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/exceptions/ResourceNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/exceptions/ResourceNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/service/IOdontologoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/service/IOdontologoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/service/IPacienteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/service/IPacienteService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/service/ITurnoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/service/ITurnoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/service/impl/OdontologoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/service/impl/OdontologoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/service/impl/PacienteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/service/impl/PacienteService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/service/impl/TurnoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backend/finalProject/service/impl/TurnoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/backend/finalProject/FinalProjectApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/backend/finalProject/OdontologoServiceTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/backend/finalProject/PacienteServiceTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/backend/finalProject/TurnoServiceTest.java" beforeDir="false" />
     </list>
     <list id="98f54944-81ad-4b2a-9f09-aebbc1069030" name="Changes by Franco" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,6 +38,9 @@
     &quot;accountId&quot;: &quot;9d2bd79e-3754-44ae-8259-469fde11ba7b&quot;
   }
 }</component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 1
@@ -237,13 +215,22 @@
       <option name="project" value="LOCAL" />
       <updated>1718347791263</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Turno error fixed.&#10;Tests implemented&#10;&#10;Project final build.">
+      <option name="closed" value="true" />
+      <created>1718678146255</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1718678146255</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Set in &amp; out data for the entities, mapper set for the Turno &amp; Odontologo services." />
     <MESSAGE value="Turno Implemented not tested, Odontologo fixed (missing setters)." />
     <MESSAGE value="Hibernate problem &#10;detached entity passed to persist: com.backend.finalProject.entity.Odontologo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hibernate problem &#10;detached entity passed to persist: com.backend.finalProject.entity.Odontologo" />
+    <MESSAGE value="Turno error fixed.&#10;Tests implemented&#10;&#10;Project final build." />
+    <option name="LAST_COMMIT_MESSAGE" value="Turno error fixed.&#10;Tests implemented&#10;&#10;Project final build." />
   </component>
 </project>
