@@ -33,8 +33,8 @@ public class TurnoService implements ITurnoService {
 
     @Override
     public TurnoSalidaDto registrarTurno(TurnoEntradaDto turnoEntradaDto) throws BadRequestException {
-        PacienteService pacienteService = new PacienteService(pacienteRepository, modelMapper);
-        OdontologoService odontologoService = new OdontologoService(odontologoRepository, modelMapper);
+        PacienteService pacienteService = new PacienteService(pacienteRepository,turnoRepository, modelMapper);
+        OdontologoService odontologoService = new OdontologoService(odontologoRepository,turnoRepository, modelMapper);
 
 
         if (pacienteService.buscarPacientePorId(turnoEntradaDto.getPacienteSalidaDto().getId()) == null) {
@@ -92,8 +92,8 @@ public class TurnoService implements ITurnoService {
 
     @Override
     public TurnoSalidaDto actualizarTurno(TurnoEntradaDto turnoEntradaDto, Long id) throws BadRequestException {
-        PacienteService pacienteService = new PacienteService(pacienteRepository, modelMapper);
-        OdontologoService odontologoService = new OdontologoService(odontologoRepository, modelMapper);
+        PacienteService pacienteService = new PacienteService(pacienteRepository,turnoRepository, modelMapper);
+        OdontologoService odontologoService = new OdontologoService(odontologoRepository,turnoRepository, modelMapper);
 
         if (pacienteService.buscarPacientePorId(turnoEntradaDto.getPacienteSalidaDto().getId()) == null) {
             throw new BadRequestException("El paciente no existe");

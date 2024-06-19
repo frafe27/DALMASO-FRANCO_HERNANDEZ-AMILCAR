@@ -3,8 +3,11 @@ package com.backend.finalProject.service.impl;
 import com.backend.finalProject.dto.entrada.PacienteEntradaDto;
 import com.backend.finalProject.dto.salida.PacienteSalidaDto;
 import com.backend.finalProject.entity.Paciente;
+import com.backend.finalProject.entity.Turno;
+import com.backend.finalProject.exceptions.BadRequestException;
 import com.backend.finalProject.exceptions.ResourceNotFoundException;
 import com.backend.finalProject.repository.PacienteRepository;
+import com.backend.finalProject.repository.TurnoRepository;
 import com.backend.finalProject.service.IPacienteService;
 import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
@@ -21,7 +24,10 @@ public class PacienteService implements IPacienteService {
     private final PacienteRepository pacienteRepository;
     private final ModelMapper modelMapper;
 
-    public PacienteService(PacienteRepository pacienteRepository, ModelMapper modelMapper) {
+    private final TurnoRepository turnoRepository;
+
+    public PacienteService(PacienteRepository pacienteRepository,TurnoRepository turnoRepository, ModelMapper modelMapper) {
+        this.turnoRepository = turnoRepository;
         this.pacienteRepository = pacienteRepository;
         this.modelMapper = modelMapper;
         configureMapping();
@@ -65,10 +71,15 @@ public class PacienteService implements IPacienteService {
     }
 
     @Override
-    public void eliminarPaciente(Long id) throws ResourceNotFoundException {
+    public void eliminarPaciente(Long id) throws ResourceNotFoundException, BadRequestException {
         if (buscarPacientePorId(id) != null) {
+            List<Turno> turnosAsociados = turnoRepository.findByPacienteId(id);
+            if (turnosAsociados.isEmpty()) {
             pacienteRepository.deleteById(id);
             LOGGER.warn("Se ha eliminado el paciente con id {}", id);
+            } else {
+                throw new BadRequestException("No se puede eliminar el paciente con id " + id + " porque tiene turnos asociados");
+            }
         } else {
             throw new ResourceNotFoundException("No existe registro de paciente con id " + id);
         }

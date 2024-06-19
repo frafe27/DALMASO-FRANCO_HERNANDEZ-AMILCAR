@@ -3,8 +3,11 @@ package com.backend.finalProject.service.impl;
 import com.backend.finalProject.dto.entrada.OdontologoEntradaDto;
 import com.backend.finalProject.dto.salida.OdontologoSalidaDto;
 import com.backend.finalProject.entity.Odontologo;
+import com.backend.finalProject.entity.Turno;
+import com.backend.finalProject.exceptions.BadRequestException;
 import com.backend.finalProject.exceptions.ResourceNotFoundException;
 import com.backend.finalProject.repository.OdontologoRepository;
+import com.backend.finalProject.repository.TurnoRepository;
 import com.backend.finalProject.service.IOdontologoService;
 import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
@@ -18,11 +21,17 @@ public class OdontologoService implements IOdontologoService {
     //Se mapea de DTO a entidad y viceversa
     private final Logger LOGGER = LoggerFactory.getLogger(OdontologoService.class);
     private final OdontologoRepository odontologoRepository;
+
+    private final TurnoRepository turnoRepository;
     private final ModelMapper modelMapper;
 
-    public OdontologoService(OdontologoRepository odontologoRepository, ModelMapper modelMapper) {
+
+
+    public OdontologoService(OdontologoRepository odontologoRepository, TurnoRepository turnoRepository, ModelMapper modelMapper) {
+        this.turnoRepository = turnoRepository;
         this.odontologoRepository = odontologoRepository;
         this.modelMapper = modelMapper;
+
     }
 
     @Override
@@ -68,10 +77,15 @@ public class OdontologoService implements IOdontologoService {
 
 
     @Override
-    public void eliminarOdontologo(Long id) throws ResourceNotFoundException {
+    public void eliminarOdontologo(Long id) throws ResourceNotFoundException, BadRequestException {
         if (buscarOdontologoPorId(id) != null) {
-            odontologoRepository.deleteById(id);
-            LOGGER.info("Se ha eliminado el Odontologo con id {}", id);
+            List<Turno> turnosAsociados = turnoRepository.findByOdontologoId(id);
+            if (turnosAsociados.isEmpty()) {
+                odontologoRepository.deleteById(id);
+                LOGGER.info("Se ha eliminado el Odontologo con id {}", id);
+            } else {
+                throw new BadRequestException("No se puede eliminar el odontólogo con id " + id + " porque tiene turnos asociados.");
+            }
         } else {
             throw new ResourceNotFoundException("No existe registro de odontologo con id " + id);
         }
