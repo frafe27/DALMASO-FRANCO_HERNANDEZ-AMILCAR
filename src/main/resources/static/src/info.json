@@ -1,0 +1,87 @@
+{
+  "turnos": [
+    {
+      "pacienteEntradaDto": {
+        "nombre": "Ana",
+        "apellido": "García",
+        "dni": 87654321,
+        "fechaIngreso": "2024-09-12",
+        "domicilioEntradaDto": {
+          "calle": "Calle Falsa",
+          "numero": 123,
+          "localidad": "Metropolis",
+          "provincia": "Estado Central"
+        }
+      },
+      "odontologoEntradaDto": {
+        "numeroMatricula": 12345,
+        "nombre": "Carlos",
+        "apellido": "Sánchez"
+      },
+      "fechaYHora": "2024-10-12T14:30:00"
+    },
+    {
+      "pacienteEntradaDto": {
+        "nombre": "Otro",
+        "apellido": "Paciente",
+        "dni": 98765432,
+        "fechaIngreso": "2024-09-13",
+        "domicilioEntradaDto": {
+          "calle": "Calle Principal",
+          "numero": 456,
+          "localidad": "Ciudad Nueva",
+          "provincia": "Estado Central"
+        }
+      },
+      "odontologoEntradaDto": {
+        "numeroMatricula": 54321,
+        "nombre": "María",
+        "apellido": "López"
+      },
+      "fechaYHora": "2024-10-13T10:00:00"
+    }
+  ],
+  "pacienteEntradaDto": [
+    {
+      "nombre": "Ana",
+      "apellido": "García",
+      "dni": 87654321,
+      "fechaIngreso": "2024-08-12",
+      "domicilioEntradaDto": {
+        "calle": "Calle Falsa",
+        "numero": 123,
+        "localidad": "Metropolis",
+        "provincia": "Estado Central"
+      }
+    },
+    {
+      "nombre": "Fernando",
+      "apellido": "Lopez",
+      "dni": 1111222333,
+      "fechaIngreso": "2024-08-13",
+      "domicilioEntradaDto": {
+        "calle": "Calle Falsa",
+        "numero": 123,
+        "localidad": "Metropolis",
+        "provincia": "Estado Central"
+      }
+    }
+  ],
+  "odontologoEntradaDto":[
+    {
+      "numeroMatricula": 54321,
+      "nombre": "María",
+      "apellido": "López"
+    },
+    {
+      "numeroMatricula": 54321,
+      "nombre": "Iva",
+      "apellido": "Kross"
+    },
+    {
+      "numeroMatricula": 54321,
+      "nombre": "Jhon",
+      "apellido": "Foster"
+    }
+  ]
+}

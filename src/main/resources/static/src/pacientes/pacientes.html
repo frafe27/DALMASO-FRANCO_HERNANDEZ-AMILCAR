@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pacientes</title>
+    <link href="../output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script type="module" src="pacientes.js"></script>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-pale-blue text-slate-gray text-center p-4">
+        <h1 class="text-3xl font-palanquin">Pacientes</h1>
+    </header>
+    <main class="bg-cover bg-no-repeat bg-center bg-hero h-screen flex items-start">
+        <section class="container mx-auto mt-10">
+            <section class="bg-white p-6 rounded-lg shadow-3xl">
+                <h2 class="text-xl font-montserrat text-slate-gray mb-4">Pacientes</h2>
+                <table class="w-full mb-4">
+                    <thead>
+                        <tr class="font-montserrat text-slate-gray">
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>DNI</th>
+                            <th>Fecha Ingreso</th>
+                            <th>Domicilio</th>
+                            <th>Eliminar</th>
+                        </tr>
+                    </thead>
+                    <tbody id="pacientes-list">
+                        <!-- Aquí se mostrarán los pacientes -->
+                    </tbody>
+                </table>
+                <button class="bg-slate-gray text-white px-4 py-2 rounded" id="ptcCreateBtn">Añadir Paciente</button>
+            </section>
+        </section>
+    </main>
+</body>
+</html>
