@@ -16,22 +16,24 @@
         <section class="container mx-auto mt-10">
             <section class="bg-white p-6 rounded-lg shadow-3xl">
                 <h2 class="text-xl font-montserrat text-slate-gray mb-4">Pacientes</h2>
-                <table class="w-full mb-4">
-                    <thead>
-                        <tr class="font-montserrat text-slate-gray">
-                            <th>Nombre</th>
-                            <th>Apellido</th>
-                            <th>DNI</th>
-                            <th>Fecha Ingreso</th>
-                            <th>Domicilio</th>
-                            <th>Eliminar</th>
-                        </tr>
-                    </thead>
-                    <tbody id="pacientes-list">
-                        <!-- Aquí se mostrarán los pacientes -->
-                    </tbody>
-                </table>
-                <button class="bg-slate-gray text-white px-4 py-2 rounded" id="ptcCreateBtn">Añadir Paciente</button>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full bg-white border border-gray-200">
+                        <thead>
+                            <tr class="bg-gray-200 text-gray-600 uppercase text-xs leading-normal">
+                                <th class="py-3 px-6 text-left">Nombre</th>
+                                <th class="py-3 px-6 text-left">Apellido</th>
+                                <th class="py-3 px-6 text-left">DNI</th>
+                                <th class="py-3 px-6 text-left">Fecha Ingreso</th>
+                                <th class="py-3 px-6 text-left">Domicilio</th>
+                                <th class="py-3 px-6 text-center">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="pacientes-list" class="text-gray-600 text-sm font-light">
+                            <!-- Aquí se mostrarán los pacientes -->
+                        </tbody>
+                    </table>
+                </div>
+                <button class="bg-slate-gray text-white px-4 py-2 rounded mt-4" id="ptcCreateBtn">Añadir Paciente</button>
             </section>
         </section>
     </main>

@@ -10,27 +10,29 @@
 </head>
 <body class="bg-gray-100">
     <header class="bg-pale-blue text-slate-gray text-center p-4">
-        <h1 class="text-3xl font-palanquin">Odontólogos Disponibles</h1>
+        <h1 class="text-3xl font-palanquin">Lista de Odontólogos</h1>
     </header>
-    <main class="bg-cover bg-no-repeat bg-center bg-hero h-screen flex items-start">
-        <section class="container mx-auto mt-10 flex justify-center items-center">
-            <section class="bg-white p-6 rounded-lg shadow-3xl w-9/12">
-                <h2 class="text-xl font-montserrat text-slate-gray mb-4">Odontólogos</h2>
-                <table class="w-full mb-4">
+    <main class="container mx-auto mt-10">
+        <section class="bg-white p-6 rounded-lg shadow-3xl">
+            <h2 class="text-xl font-montserrat text-slate-gray mb-4">Odontólogos</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200">
                     <thead>
-                        <tr class="font-montserrat text-slate-gray">
-                            <th>Nombre</th>
-                            <th>Apellido</th>
-                            <th>Nro matrícula</th>
-                            <th>Eliminar</th>
+                        <tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
+                            <th class="py-3 px-20 text-center">Nombre</th>
+                            <th class="py-3 px-20 text-center">Apellido</th>
+                            <th class="py-3 px-20 text-center">Número de Matrícula</th>
+                            <th class="py-3 px-20 text-center">Acciones</th>
                         </tr>
                     </thead>
-                    <tbody id="odontologos-list">
-                        <!-- Aquí se mostrarán los odontologos -->
+                    <tbody id="odontologos-list" class="text-gray-600 text-sm font-light">
+                        <!-- Aquí se mostrarán los odontólogos -->
                     </tbody>
                 </table>
+            </div>
+            <div class="flex justify-end mt-4">
                 <button id="odtCreateBtn" class="bg-slate-gray text-white px-4 py-2 rounded">Añadir Odontólogo</button>
-            </section>
+            </div>
         </section>
     </main>
 </body>
