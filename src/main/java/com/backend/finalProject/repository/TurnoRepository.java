@@ -1,6 +1,5 @@
 package com.backend.finalProject.repository;
 
-import com.backend.finalProject.entity.Odontologo;
 import com.backend.finalProject.entity.Turno;
 import org.springframework.data.jpa.repository.JpaRepository;
 
