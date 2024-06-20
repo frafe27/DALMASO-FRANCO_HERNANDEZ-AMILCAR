@@ -10,26 +10,28 @@
 </head>
 <body class="bg-gray-100">
     <header class="bg-pale-blue text-slate-gray text-center p-4">
-        <h1 class="text-3xl font-palanquin">Turnos</h1>
+        <h1 class="text-3xl font-palanquin">Lista de Turnos</h1>
     </header>
     <main class="bg-cover bg-no-repeat bg-center bg-hero h-screen flex items-start">
-        <section class="container mx-auto mt-10 ">
+        <section class="container mx-auto mt-10">
             <section class="bg-white p-6 rounded-lg shadow-3xl">
                 <h2 class="text-xl font-montserrat text-slate-gray mb-4">Turnos</h2>
-                <table class="w-full mb-4">
-                    <thead>
-                        <tr class="font-montserrat text-slate-gray">
-                            <th>Paciente</th>
-                            <th>Odontólogo</th>
-                            <th>Fecha</th>
-                            <th>Eliminar</th>
-                        </tr>
-                    </thead>
-                    <tbody id="turnos-list">
-                        <!-- Aquí se mostrarán los turnos -->
-                    </tbody>
-                </table>
-                <button class="bg-slate-gray text-white px-4 py-2 rounded" id="turCreateBtn">Añadir Turno</button>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full bg-white border border-gray-200">
+                        <thead>
+                            <tr class="bg-gray-200 text-gray-600 uppercase text-xs leading-normal">
+                                <th class="py-3 px-6 text-left">Paciente</th>
+                                <th class="py-3 px-6 text-left">Odontólogo</th>
+                                <th class="py-3 px-6 text-left">Fecha y Hora</th>
+                                <th class="py-3 px-6 text-center">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="turnos-list" class="text-gray-600 text-sm font-light">
+                            <!-- Aquí se mostrarán los turnos -->
+                        </tbody>
+                    </table>
+                </div>
+                <button class="bg-slate-gray text-white px-4 py-2 rounded mt-4" id="tcrCreateBtn">Añadir Turno</button>
             </section>
         </section>
     </main>

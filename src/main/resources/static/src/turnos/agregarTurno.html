@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Turno</title>
+    <link href="../output.css" rel="stylesheet">
+    <script type="module" src="agregarTurno.js"></script>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-pale-blue text-slate-gray text-center p-4">
+        <h1 class="text-3xl font-palanquin">Agregar Turno</h1>
+    </header>
+    <main class="container mx-auto mt-10 flex justify-center">
+        <section class="bg-white p-6 rounded-lg shadow-3xl w-8/12">
+            <div class="border-b border-gray-900/10 pb-12">
+                <h2 class="text-xl font-montserrat text-slate-gray mb-4">Turno</h2>
+                <form id="turno-form">
+                    <!-- Dropdown para seleccionar paciente -->
+                    <div class="mb-6">
+                        <label for="paciente-select" class="block text-sm font-medium leading-6 text-gray-900">Paciente</label>
+                        <div class="mt-2">
+                            <select id="paciente-select" name="paciente-select" class="block w-full rounded-md border-0 py-1.5 pl-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                <option value="">Selecciona un paciente...</option>
+                                <!-- Opciones de pacientes se generan dinámicamente -->
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Dropdown para seleccionar odontólogo -->
+                    <div class="mb-6">
+                        <label for="odontologo-select" class="block text-sm font-medium leading-6 text-gray-900">Odontólogo</label>
+                        <div class="mt-2">
+                            <select id="odontologo-select" name="odontologo-select" class="block w-full rounded-md border-0 py-1.5 pl-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                <option value="">Selecciona un odontólogo...</option>
+                                <!-- Opciones de odontólogos se generan dinámicamente -->
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Fecha y Hora -->
+                    <div class="mb-6">
+                        <label for="fecha-y-hora" class="block text-sm font-medium leading-6 text-gray-900">Fecha y Hora</label>
+                        <div class="mt-2">
+                            <input type="datetime-local" name="fecha-y-hora" id="fecha-y-hora" class="block w-full rounded-md border-0 py-1.5 pl-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                        </div>
+                    </div>
+
+                    <!-- Botón Guardar -->
+                    <div class="flex justify-end mt-6">
+                        <button type="button" id="saveTurnoBtn" class="inline-flex items-center px-4 py-2 bg-blue-800 border border-transparent rounded-md font-semibold text-black hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                            Guardar
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

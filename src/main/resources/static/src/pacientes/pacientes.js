@@ -4,11 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
             .then((response) => response.json())
             .then((data) => {
                 const pacientesList = document.getElementById("pacientes-list");
-
-                if (!Array.isArray(data)) {
-                    throw new Error('Los datos recibidos no son un array');
-                }
-
                 pacientesList.innerHTML = data
                     .map((paciente) => `
                         <tr>
@@ -23,7 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
                             </td>
                         </tr>
                     `).join("");
-
                 addEventListeners();
             })
             .catch((error) => console.error("Hubo un problema con la petición Fetch:", error));
@@ -43,13 +37,13 @@ document.addEventListener("DOMContentLoaded", () => {
         editButtons.forEach((button) => {
             button.addEventListener("click", (event) => {
                 const pacienteId = event.currentTarget.getAttribute("data-id");
-                window.location.href = `./pacientes.form.html?id=${pacienteId}`; // Cambio aquí
+                window.location.href = `./pacientes.form.html?id=${pacienteId}`; 
             });
         });
 
         const pacienteCreateBtn = document.getElementById("ptcCreateBtn");
         pacienteCreateBtn.addEventListener("click", () => {
-            window.location.href = "./pacientes.form.html"; // Cambio aquí
+            window.location.href = "./pacientes.form.html";
         });
     };
 
@@ -60,8 +54,12 @@ document.addEventListener("DOMContentLoaded", () => {
         .then((response) => {
             if (response.ok) {
                 listPacientes();
+            } else if (response.status === 400) {
+                response.json().then((errorData) => {
+                    alert("Error al eliminar el paciente: " + errorData.mensaje);
+                });
             } else {
-                console.error("Error al eliminar el paciente");
+                throw new Error("Error al eliminar el paciente. Código de error: " + response.status);
             }
         })
         .catch((error) => console.error("Error:", error));
