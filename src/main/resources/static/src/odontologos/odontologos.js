@@ -5,7 +5,8 @@ document.addEventListener("DOMContentLoaded", () => {
       .then((data) => {
         const odontologosList = document.getElementById("odontologos-list");
         odontologosList.innerHTML = data
-          .map((odontologo) => `
+          .map(
+            (odontologo) => `
             <tr>
               <td class="py-2 text-center">${odontologo.nombre}</td>
               <td class="py-2 text-center">${odontologo.apellido}</td>
@@ -13,10 +14,14 @@ document.addEventListener("DOMContentLoaded", () => {
               <td class="py-2 text-center"><button data-id="${odontologo.id}" class="text-red-500 dltOdt"><i class="fas fa-trash-alt"></i></button></td>
               <td class="py-2 text-center"><button data-id="${odontologo.id}" class="text-red-500 editOdt"><i class="fas fa-edit"></i></button></td>
             </tr>
-          `).join("");
+          `
+          )
+          .join("");
         addEventListeners();
       })
-      .catch((error) => console.error("Hubo un problema con la petición Fetch:", error));
+      .catch((error) =>
+        console.error("Hubo un problema con la petición Fetch:", error)
+      );
   };
 
   const createOdt = document.getElementById("odtCreateBtn");
@@ -45,23 +50,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const deleteOdt = (id) => {
     fetch(`http://localhost:8080/odontologos/eliminar?id=${id}`, {
-        method: "DELETE",
+      method: "DELETE",
     })
-    .then((response) => {
+      .then((response) => {
         if (response.ok) {
-            listOdontologos();
+          listOdontologos();
         } else if (response.status === 400) {
-            response.json().then((errorData) => {
-                alert("Error al eliminar el odontólogo: " + errorData.mensaje);
-            });
+          response.json().then((errorData) => {
+            alert("Error al eliminar el odontólogo: " + errorData.mensaje);
+          });
         } else {
-            throw new Error("Error al eliminar el odontólogo. Código de error: " + response.status);
+          throw new Error(
+            "Error al eliminar el odontólogo. Código de error: " +
+              response.status
+          );
         }
-    })
-    .catch((error) => {
+      })
+      .catch((error) => {
         console.error(error); // Imprimir en la consola solo errores no controlados
-    });
-};
+      });
+  };
 
   listOdontologos();
 });
